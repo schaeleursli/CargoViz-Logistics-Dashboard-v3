@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { PackageIcon, UploadIcon, FilterIcon, PlusIcon, SearchIcon, CheckIcon, XIcon, EditIcon, ChevronDownIcon } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { PackageIcon, UploadIcon, FilterIcon, PlusIcon, SearchIcon, CheckIcon, XIcon, EditIcon, ChevronDownIcon, MapPinIcon } from 'lucide-react';
 const CargoManagement = () => {
   const [cargoItems, setCargoItems] = useState([{
     id: 1,
@@ -55,6 +56,10 @@ const CargoManagement = () => {
             <PlusIcon size={16} className="mr-2" />
             <span>Add Cargo</span>
           </button>
+          <Link to="/cargo/place" className="px-3 py-2 bg-green-600 text-white rounded-md flex items-center">
+            <MapPinIcon size={16} className="mr-2" />
+            <span>Place Cargo</span>
+          </Link>
           <button className="px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md flex items-center dark:text-white">
             <UploadIcon size={16} className="mr-2" />
             <span>Import List</span>
